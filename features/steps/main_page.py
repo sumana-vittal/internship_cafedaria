@@ -30,9 +30,19 @@ def click_on_team(context):
     context.app.main_page_header.click_on_team()
 
 
+@when("Click on 'FAQ' option.")
+def click_on_faq(context):
+    context.app.main_page_header.click_on_faq()
+
+
 @then("Verify the team page opens.")
 def team_page_opens(context):
     context.app.team_page.verify_team_page_opens()
+
+
+@then("Verify the FAQ page opens.")
+def verify_faq_page_opens(context):
+    context.app.faq_page.verify_faq_page_opens()
 
 
 @then("Verify the 'About' page opens.")

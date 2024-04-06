@@ -70,6 +70,8 @@ class Page:
 
     def hover_over(self, web_element):
         actions = ActionChains(self.driver)
-        actions.move_to_element(web_element).perform()
+        actions.move_to_element(web_element)
+        actions.pause(2)
+        actions.perform()
 
 

@@ -1,3 +1,5 @@
+from time import sleep
+
 from selenium.webdriver.common.by import By
 
 from pages.base_page import Page
@@ -11,6 +13,7 @@ class MainPageHeader(Page):
     SEARCH_ICON = (By.CSS_SELECTOR, "div.rd-navbar-search")
     ABOUT_LINK = (By.CSS_SELECTOR, ".rd-navbar-nav [href*='about']")
     TEAM_OPTION = (By.XPATH, "//a[text()='Team']")
+    FAQ_OPTION = (By.XPATH, "//a[text()='FAQ']")
 
     def click_about(self):
         self.wait_element_clickable_click(*self.ABOUT_LINK)
@@ -32,7 +35,12 @@ class MainPageHeader(Page):
     def hover_over_about(self):
         web_element = self.find_element(*self.ABOUT_LINK)
         self.hover_over(web_element)
+        # sleep(3)
 
     def click_on_team(self):
         self.wait_element_clickable_click(*self.TEAM_OPTION)
+
+    def click_on_faq(self):
+        sleep(2)
+        self.wait_element_clickable_click(*self.FAQ_OPTION)
 
