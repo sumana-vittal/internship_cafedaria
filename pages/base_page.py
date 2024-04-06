@@ -55,4 +55,16 @@ class Page:
             message=f"Element by '{locator}' is not clickable."
         ).click()
 
+    def verify_partial_url(self, expected_partial_url):
+        self.wait.until(
+            EC.url_contains(expected_partial_url),
+            message=f'Expected {expected_partial_url} not in url'
+        )
+
+    def verify_url(self, url):
+        self.wait.until(
+            EC.url_to_be(url),
+            message=f'Expected {url} is not present.'
+        )
+
 

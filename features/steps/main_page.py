@@ -1,7 +1,5 @@
 from behave import given, when, then
-from selenium.webdriver.common.by import By
 
-FOOTER_TITLE = (By.CSS_SELECTOR, "[class*='page-footer'] .brand")
 
 @given("Open the main page.")
 def open_home_page(context):
@@ -10,14 +8,27 @@ def open_home_page(context):
 
 @when("Scroll down to the footer.")
 def scroll_footer(context):
-    context.driver.execute_script("window.scrollBy(0,3000)","")
+    context.driver.execute_script("window.scrollBy(0,3000)", "")
+
+
+@when("Click on 'About' sub-title in the navigation bar.")
+def click_about(context):
+    context.app.main_page_header.click_about()
+
+
+@then("Verify the 'About' page opens.")
+def verify_about_page_opens(context):
+    context.app.about_page.verify_about_page_opens()
+
+
+@then("Verify the title 'A Few Words About Us' exists.")
+def verify_about_page_title(context):
+    context.app.about_page.verify_about_page_title()
 
 
 @then("Verify the title Cafedaria in the footer exists.")
 def verify_footer_title(context):
     context.app.main_page_footer.verify_footer_title()
-    # title = context.driver.find_element(*FOOTER_TITLE).text
-    # print(title)
 
 
 @then("Verify the footer contains a map.")

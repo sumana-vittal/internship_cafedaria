@@ -9,6 +9,10 @@ class MainPageHeader(Page):
     HEADER_NAV_ITEMS = (By.CSS_SELECTOR, ".rd-navbar-nav li.rd-nav-item")
     CART_ICON = (By.CSS_SELECTOR, "a.mdi-cart-outline")
     SEARCH_ICON = (By.CSS_SELECTOR, "div.rd-navbar-search")
+    ABOUT_LINK = (By.CSS_SELECTOR, ".rd-navbar-nav [href*='about']")
+
+    def click_about(self):
+        self.wait_element_clickable_click(*self.ABOUT_LINK)
 
     def verify_header_title(self):
         self.presence_of_element_located(*self.HEADER_TITLE)
