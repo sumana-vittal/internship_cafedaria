@@ -37,4 +37,22 @@ class Page:
             message=f"Couldn't find the presence of element at '{locator}'"
         )
 
+    def wait_element_locator_clickable(self, *locator):
+        self.wait.until(
+            EC.element_to_be_clickable(locator),
+            message=f"Element by '{locator}' is not clickable."
+        )
+
+    def wait_element_clickable(self, element):
+        self.wait.until(
+            EC.element_to_be_clickable(element),
+            message=f"Element '{element}' is not clickable."
+        )
+
+    def wait_element_clickable_click(self, *locator):
+        self.wait.until(
+            EC.element_to_be_clickable(locator),
+            message=f"Element by '{locator}' is not clickable."
+        ).click()
+
 

@@ -24,3 +24,17 @@ def verify_footer_title(context):
 def verify_footer_map(context):
     context.app.main_page_footer.verify_footer_map()
 
+
+@then("Verify the title Cafedaria exists on the navigation bar.")
+def verify_header_title(context):
+    context.app.main_page_header.verify_header_title()
+
+
+@then("Verify there are {no_of_sub_titles} sub-titles in the navigation bar and all of them are clickable.")
+def verify_header_sub_titles(context, no_of_sub_titles):
+    context.app.main_page_header.verify_header_sub_titles(no_of_sub_titles)
+
+
+@then("Verify the cart and search icons exists.")
+def verify_cart_search_icon(context):
+    context.app.main_page_header.verify_cart_search_icon()
