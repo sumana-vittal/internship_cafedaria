@@ -1,3 +1,4 @@
+from selenium.webdriver import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -66,5 +67,9 @@ class Page:
             EC.url_to_be(url),
             message=f'Expected {url} is not present.'
         )
+
+    def hover_over(self, web_element):
+        actions = ActionChains(self.driver)
+        actions.move_to_element(web_element).perform()
 
 

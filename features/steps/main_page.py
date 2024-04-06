@@ -1,4 +1,8 @@
+from time import sleep
+
 from behave import given, when, then
+from selenium.webdriver import ActionChains, Keys
+from selenium.webdriver.common.by import By
 
 
 @given("Open the main page.")
@@ -14,6 +18,21 @@ def scroll_footer(context):
 @when("Click on 'About' sub-title in the navigation bar.")
 def click_about(context):
     context.app.main_page_header.click_about()
+
+
+@when("Hover over 'About' sub-title in the navigation bar.")
+def hover_over_about(context):
+    context.app.main_page_header.hover_over_about()
+
+
+@when("Click on 'team' option.")
+def click_on_team(context):
+    context.app.main_page_header.click_on_team()
+
+
+@then("Verify the team page opens.")
+def team_page_opens(context):
+    context.app.team_page.verify_team_page_opens()
 
 
 @then("Verify the 'About' page opens.")

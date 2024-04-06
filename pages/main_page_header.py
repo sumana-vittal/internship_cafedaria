@@ -10,6 +10,7 @@ class MainPageHeader(Page):
     CART_ICON = (By.CSS_SELECTOR, "a.mdi-cart-outline")
     SEARCH_ICON = (By.CSS_SELECTOR, "div.rd-navbar-search")
     ABOUT_LINK = (By.CSS_SELECTOR, ".rd-navbar-nav [href*='about']")
+    TEAM_OPTION = (By.XPATH, "//a[text()='Team']")
 
     def click_about(self):
         self.wait_element_clickable_click(*self.ABOUT_LINK)
@@ -27,3 +28,11 @@ class MainPageHeader(Page):
     def verify_cart_search_icon(self):
         self.presence_of_element_located(*self.CART_ICON)
         self.presence_of_element_located(*self.SEARCH_ICON)
+
+    def hover_over_about(self):
+        web_element = self.find_element(*self.ABOUT_LINK)
+        self.hover_over(web_element)
+
+    def click_on_team(self):
+        self.wait_element_clickable_click(*self.TEAM_OPTION)
+
