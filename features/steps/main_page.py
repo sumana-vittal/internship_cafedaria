@@ -35,6 +35,11 @@ def click_on_faq(context):
     context.app.main_page_header.click_on_faq()
 
 
+@when("Click on 'Careers' option.")
+def click_on_career(context):
+    context.app.main_page_header.click_on_career()
+
+
 @then("Verify the team page opens.")
 def team_page_opens(context):
     context.app.team_page.verify_team_page_opens()
@@ -48,6 +53,10 @@ def verify_faq_page_opens(context):
 @then("Verify the 'About' page opens.")
 def verify_about_page_opens(context):
     context.app.about_page.verify_about_page_opens()
+
+@then("Verify the Career page opens.")
+def verify_careers_page_opens(context):
+    context.app.careers_page.verify_careers_page_opens()
 
 
 @then("Verify the title 'A Few Words About Us' exists.")

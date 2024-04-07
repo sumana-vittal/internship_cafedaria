@@ -14,6 +14,7 @@ class MainPageHeader(Page):
     ABOUT_LINK = (By.CSS_SELECTOR, ".rd-navbar-nav [href*='about']")
     TEAM_OPTION = (By.XPATH, "//a[text()='Team']")
     FAQ_OPTION = (By.XPATH, "//a[text()='FAQ']")
+    CAREERS_OPTION = (By.XPATH, "//a[text()='Careers']")
 
     def click_about(self):
         self.wait_element_clickable_click(*self.ABOUT_LINK)
@@ -41,6 +42,9 @@ class MainPageHeader(Page):
         self.wait_element_clickable_click(*self.TEAM_OPTION)
 
     def click_on_faq(self):
-        sleep(2)
         self.wait_element_clickable_click(*self.FAQ_OPTION)
+
+    def click_on_career(self):
+        self.wait_element_clickable_click(*self.CAREERS_OPTION)
+
 
