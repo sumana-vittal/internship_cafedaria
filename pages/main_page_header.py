@@ -15,6 +15,7 @@ class MainPageHeader(Page):
     TEAM_OPTION = (By.XPATH, "//a[text()='Team']")
     FAQ_OPTION = (By.XPATH, "//a[text()='FAQ']")
     CAREERS_OPTION = (By.XPATH, "//a[text()='Careers']")
+    SHOP_LINK = (By.XPATH, "//a[text()='Shop']")
 
     def click_about(self):
         self.wait_element_clickable_click(*self.ABOUT_LINK)
@@ -46,5 +47,8 @@ class MainPageHeader(Page):
 
     def click_on_career(self):
         self.wait_element_clickable_click(*self.CAREERS_OPTION)
+
+    def click_on_shop(self):
+        self.wait_element_clickable_click(*self.SHOP_LINK)
 
 

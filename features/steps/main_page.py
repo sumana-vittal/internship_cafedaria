@@ -40,6 +40,21 @@ def click_on_career(context):
     context.app.main_page_header.click_on_career()
 
 
+@when("Click on 'Shop' sub-title in the navigation bar.")
+def click_on_shop(context):
+    context.app.main_page_header.click_on_shop()
+
+
+@then("Verify the Shop page opens.")
+def verify_shop_page_opens(context):
+    context.app.shop_page.verify_shop_page_open()
+
+
+@then("Verify the title 'Catalog' exists on the left side.")
+def verify_shop_title_catalog(context):
+    context.app.shop_page.verify_shop_title_catalog()
+
+
 @then("Verify the team page opens.")
 def team_page_opens(context):
     context.app.team_page.verify_team_page_opens()

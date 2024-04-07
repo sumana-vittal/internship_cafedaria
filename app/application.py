@@ -4,6 +4,7 @@ from pages.careers_page import CareersPage
 from pages.faq_page import FAQPage
 from pages.main_page_footer import MainPageFooter
 from pages.main_page_header import MainPageHeader
+from pages.shop_page import ShopPage
 from pages.team_page import TeamPage
 
 
@@ -17,3 +18,4 @@ class Application:
         self.team_page = TeamPage(driver)
         self.faq_page = FAQPage(driver)
         self.careers_page = CareersPage(driver)
+        self.shop_page = ShopPage(driver)
