@@ -49,6 +49,8 @@ class MainPageHeader(Page):
         self.wait_element_clickable_click(*self.CAREERS_OPTION)
 
     def click_on_shop(self):
-        self.wait_element_clickable_click(*self.SHOP_LINK)
+        self.wait_locator_clickable_click(*self.SHOP_LINK)
+
+
 
 
