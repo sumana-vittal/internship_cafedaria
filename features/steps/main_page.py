@@ -45,6 +45,11 @@ def click_on_shop(context):
     context.app.main_page_header.click_on_shop()
 
 
+@when("Click on 'Contact' sub-title in the navigation bar.")
+def click_on_contact(context):
+    context.app.main_page_header.click_contact()
+
+
 @then("Verify the Shop page opens.")
 def verify_shop_page_opens(context):
     context.app.shop_page.verify_shop_page_open()

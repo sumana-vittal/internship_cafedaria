@@ -2,6 +2,7 @@ from pages.about_page import AboutPage
 from pages.base_page import Page
 from pages.careers_page import CareersPage
 from pages.cart_page import CartPage
+from pages.contact_page import ContactPage
 from pages.faq_page import FAQPage
 from pages.main_page_footer import MainPageFooter
 from pages.main_page_header import MainPageHeader
@@ -21,3 +22,4 @@ class Application:
         self.careers_page = CareersPage(driver)
         self.shop_page = ShopPage(driver)
         self.cart_page = CartPage(driver)
+        self.contact_page = ContactPage(driver)

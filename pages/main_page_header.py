@@ -16,9 +16,13 @@ class MainPageHeader(Page):
     FAQ_OPTION = (By.XPATH, "//a[text()='FAQ']")
     CAREERS_OPTION = (By.XPATH, "//a[text()='Careers']")
     SHOP_LINK = (By.XPATH, "//a[text()='Shop']")
+    CONTACT_LINK = (By.XPATH, "//a[text()='Contacts']")
 
     def click_about(self):
-        self.wait_element_clickable_click(*self.ABOUT_LINK)
+        self.wait_locator_clickable_click(*self.ABOUT_LINK)
+
+    def click_contact(self):
+        self.wait_locator_clickable_click(*self.CONTACT_LINK)
 
     def verify_header_title(self):
         self.presence_of_element_located(*self.HEADER_TITLE)

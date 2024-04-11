@@ -19,6 +19,13 @@ Feature: Test Scenarios for the main page.
     Then Verify the title 'A Few Words About Us' exists.
 
 
+  Scenario: User can click on “Contact” option
+      Given Open the main page.
+      When Click on 'Contact' sub-title in the navigation bar.
+      Then Verify the right page opens.
+      Then Verify the title 'Contact' exists on the left side.
+      Then Verify the title 'Get in touch' exists on the right side.
+
 
 
 
