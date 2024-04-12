@@ -44,13 +44,13 @@ class MainPageHeader(Page):
         # sleep(3)
 
     def click_on_team(self):
-        self.wait_element_clickable_click(*self.TEAM_OPTION)
+        self.wait_locator_clickable_click(*self.TEAM_OPTION)
 
     def click_on_faq(self):
-        self.wait_element_clickable_click(*self.FAQ_OPTION)
+        self.wait_locator_clickable_click(*self.FAQ_OPTION)
 
     def click_on_career(self):
-        self.wait_element_clickable_click(*self.CAREERS_OPTION)
+        self.wait_locator_clickable_click(*self.CAREERS_OPTION)
 
     def click_on_shop(self):
         self.wait_locator_clickable_click(*self.SHOP_LINK)
